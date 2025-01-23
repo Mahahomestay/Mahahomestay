@@ -1,0 +1,235 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body font and basic styling */
+body {
+  font-family: 'Lora', serif; /* Body font */
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f4f4;
+}
+
+/* Header */
+header {
+  background-color: #333;
+  padding: 10px 0;
+  text-align: center;
+}
+
+header .logo img {
+  max-width: 150px;
+}
+
+/* Rooms Section */
+.rooms {
+  padding: 30px 20px;
+  background-color: #f9f9f9;
+}
+
+.rooms h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.8rem;
+}
+
+.rooms ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.rooms ul li {
+  margin: 10px;
+}
+
+.rooms ul li a {
+  text-decoration: none;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border-radius: 5px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.rooms ul li a:hover {
+  background-color: #555;
+}
+
+/* Room Details */
+.room-detail {
+  display: none;
+  padding: 20px;
+  background-color: #fff;
+  margin: 20px 0;
+  border-radius: 8px;
+}
+
+.room-detail img {
+  width: 200px;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.room-detail h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.room-detail p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.room-detail ul {
+  list-style-type: none;
+  margin: 15px 0;
+  padding: 0;
+}
+
+.room-detail ul li {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.room-detail ul li strong {
+  color: #333;
+}
+
+/* Reviews Section */
+.reviews {
+  padding: 30px 20px;
+  background-color: #fff;
+}
+
+.reviews h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+}
+
+.reviews .review {
+  margin-bottom: 20px;
+  background-color: #f4f4f4;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.reviews .review p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Our Property Section */
+.our-property {
+  padding: 30px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.our-property h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.carousel {
+  display: flex;
+  overflow-x: auto; /* Allows horizontal scrolling */
+  gap: 10px;
+  scroll-snap-type: x mandatory; /* Ensures images snap to place */
+  scroll-behavior: smooth; /* Smooth scrolling effect */
+  margin-top: 20px;
+}
+
+.carousel img {
+  max-width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  scroll-snap-align: start; /* Align images to the left side of the container */
+  transition: transform 0.3s ease;
+}
+
+.carousel img:hover {
+  transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer .contact {
+  margin-bottom: 20px;
+}
+
+footer .contact h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.8rem;
+}
+
+footer .contact p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer p {
+  font-size: 1rem;
+  margin-top: 20px;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  .rooms ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .room-detail img {
+    max-width: 100%;
+  }
+
+  .carousel {
+    flex-direction: row;
+  }
+
+  .carousel img {
+    max-width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  .rooms ul li a {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+
+  .carousel img {
+    max-width: 100%;
+  }
+}
